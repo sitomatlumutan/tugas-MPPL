@@ -1,0 +1,34 @@
+#include <iostream.h>
+#include <conio.h>
+#include <stdio.h>
+
+void main()
+{
+	 char nip[18],nama[30];
+	 int gol,gajipo,tunj,gajibe;
+
+	 printf("\n NIP            :");scanf("%s",&nip);
+	 printf("\n NAMA           :");scanf("%s",&nama);
+	 printf("\n GOLONGAN (1-4) :");scanf("%d",&gol);
+
+	 if(gol==1)
+	 gajipo=600000;
+	 else if(gol==2)
+	 gajipo=700000;
+	 else if(gol==3)
+	 gajipo=800000;
+	 else if(gol==4)
+	 gajipo=900000;
+
+	 printf("\n GAJI POKOK     :%d",gajipo);
+
+    //hitung tunjangan
+	 tunj=((gajipo*10)/100);
+	 printf("\n TUNJANGAN      :%d",tunj);
+
+	 //hitung gaji bersih
+	 gajibe=(gajipo+tunj);
+	 printf("\n GAJI BERSIH    :%d",gajibe);
+
+	 getch();
+}
