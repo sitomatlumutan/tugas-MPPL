@@ -1,34 +1,49 @@
-#include <iostream.h>
-#include <conio.h>
-#include <stdio.h>
+#include<iostream.h>	
 
-void main()
+int main()
 {
-	 char nip[18],nama[30];
-	 int gol,gajipo,tunj,gajibe;
+	 float tunj,gajipo,gajibe;
+    	 char nama[30],nip[18];
+   	 int gol;
 
-	 printf("\n NIP            :");scanf("%s",&nip);
-	 printf("\n NAMA           :");scanf("%s",&nama);
-	 printf("\n GOLONGAN (1-4) :");scanf("%d",&gol);
+	 cout<<"|Program Menghitung Gaji Bersih Karyawan|"<<endl;
+	 cout<<"|_______________________________________|"<<endl;
+	 cout<<endl;
+	 cout<<"NIP           : ";cin>>nip;
+	 cout<<"NAMA          : ";cin>>nama;
+	 cout<<"GOLONGAN      : ";cin>>gol;
 
 	 if(gol==1)
-	 gajipo=600000;
+	 {gajipo=600000;}
 	 else if(gol==2)
-	 gajipo=700000;
+	 {gajipo=700000;}
 	 else if(gol==3)
-	 gajipo=800000;
+	 {gajipo=800000;}
 	 else if(gol==4)
-	 gajipo=900000;
+	 {gajipo=900000;}
+    	 else
+    	 {
+        	cout<<endl;
+        	cout<<endl;
+        	cout<<"Maaf Golongan yang anda masukkan Salah Isikan Golongan dari 1-4"<<endl;
+     	 return 1;
+     	 }
 
-	 printf("\n GAJI POKOK     :%d",gajipo);
-
-    //hitung tunjangan
+	 //hitung tunjangan
 	 tunj=((gajipo*10)/100);
-	 printf("\n TUNJANGAN      :%d",tunj);
-
 	 //hitung gaji bersih
-	 gajibe=(gajipo+tunj);
-	 printf("\n GAJI BERSIH    :%d",gajibe);
+    	 gajibe=(gajipo+tunj);
 
-	 getch();
+    	 cout<<endl;
+	 cout<<"====================="<<endl;
+	 cout<<"Data Gaji Anda Adalah"<<endl;
+	 cout<<"====================="<<endl;
+    	 cout<<"NIP         : "<<nip<<endl;
+	 cout<<"NAMA        : "<<nama<<endl;
+    	 cout<<"TUNJANGAN   : "<<tunj<<endl;
+    	 cout<<"GAJI POKOK  : "<<gajipo<<endl;
+    	 cout<<"              __________+"<<endl;
+    	 cout<<"GAJI BERSIH : "<<gajibe<<endl;
+
+    	 return 0;
 }
