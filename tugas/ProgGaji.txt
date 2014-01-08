@@ -1,8 +1,8 @@
-#include<iostream.h>	
+#include<iostream.h>
 
 int main()
 {
-	 float tunj,gajipo,gajibe;
+	 float tunj,gajipo,gajibe,pajak;
     	 char nama[30],nip[18];
    	 int gol;
 
@@ -21,29 +21,33 @@ int main()
 	 {gajipo=800000;}
 	 else if(gol==4)
 	 {gajipo=900000;}
-    	 else
+	 else
     	 {
-        	cout<<endl;
-        	cout<<endl;
-        	cout<<"Maaf Golongan yang anda masukkan Salah Isikan Golongan dari 1-4"<<endl;
-     	 return 1;
+         	cout<<endl;
+         	cout<<endl;
+	 	cout<<"Maaf Golongan yang anda masukkan Salah Isikan Golongan dari 1-4"<<endl;
+	 	return 1;
      	 }
 
 	 //hitung tunjangan
 	 tunj=((gajipo*10)/100);
+	 //hitung pajak
+	 pajak=((gajipo+tunj)*0.02);
 	 //hitung gaji bersih
-    	 gajibe=(gajipo+tunj);
+	 gajibe=((gajipo+tunj)-pajak);
 
-    	 cout<<endl;
+
+         cout<<endl;
 	 cout<<"====================="<<endl;
 	 cout<<"Data Gaji Anda Adalah"<<endl;
 	 cout<<"====================="<<endl;
-    	 cout<<"NIP         : "<<nip<<endl;
+         cout<<"NIP         : "<<nip<<endl;
 	 cout<<"NAMA        : "<<nama<<endl;
     	 cout<<"TUNJANGAN   : "<<tunj<<endl;
-    	 cout<<"GAJI POKOK  : "<<gajipo<<endl;
-    	 cout<<"              __________+"<<endl;
-    	 cout<<"GAJI BERSIH : "<<gajibe<<endl;
+	 cout<<"GAJI POKOK  : "<<gajipo<<endl;
+	 cout<<"PAJAK       : "<<pajak<<endl;
+	 cout<<"              __________+"<<endl;
+	 cout<<"GAJI BERSIH : "<<gajibe<<endl;
 
-    	 return 0;
+         return 0;
 }
