@@ -1,10 +1,13 @@
+#include<conio.h>
 #include<iostream.h>
+#include<stdio.h>
+#include<iomanip.h>
 
 int main()
 {
 	 float tunj,gajipo,gajibe,pajak;
     	 char nama[30],nip[18];
-   	 int gol;
+	 int gol;
 
 	 cout<<"|Program Menghitung Gaji Bersih Karyawan|"<<endl;
 	 cout<<"|_______________________________________|"<<endl;
@@ -14,19 +17,19 @@ int main()
 	 cout<<"GOLONGAN      : ";cin>>gol;
 
 	 if(gol==1)
-	 {gajipo=600000;}
+	 gajipo=600000;
 	 else if(gol==2)
-	 {gajipo=700000;}
+	 gajipo=700000;
 	 else if(gol==3)
-	 {gajipo=800000;}
+	 gajipo=800000;
 	 else if(gol==4)
-	 {gajipo=900000;}
+	 gajipo=900000;
 	 else
-    	 {
-         	cout<<endl;
-         	cout<<endl;
-	 	cout<<"Maaf Golongan yang anda masukkan Salah Isikan Golongan dari 1-4"<<endl;
-	 	return 1;
+	 {
+        	cout<<endl;
+		cout<<endl;
+		cout<<"Maaf Golongan yang anda masukkan Salah Isikan Golongan dari 1-4"<<endl;
+		return 1;
      	 }
 
 	 //hitung tunjangan
@@ -37,17 +40,21 @@ int main()
 	 gajibe=((gajipo+tunj)-pajak);
 
 
-         cout<<endl;
-	 cout<<"====================="<<endl;
-	 cout<<"Data Gaji Anda Adalah"<<endl;
-	 cout<<"====================="<<endl;
-         cout<<"NIP         : "<<nip<<endl;
-	 cout<<"NAMA        : "<<nama<<endl;
-    	 cout<<"TUNJANGAN   : "<<tunj<<endl;
-	 cout<<"GAJI POKOK  : "<<gajipo<<endl;
-	 cout<<"PAJAK       : "<<pajak<<endl;
-	 cout<<"              __________+"<<endl;
-	 cout<<"GAJI BERSIH : "<<gajibe<<endl;
+	 cout<<endl;
+	 cout<<"======================================================================"<<endl;
+	 cout<<"                        Data Gaji Anda Adalah                         "<<endl;
+	 cout<<"======================================================================"<<endl;
+	 cout<<"NIP        Nama        Tunjangan     Gaji Pokok     Pajak       Gaji  "<<endl;
+	 cout<<"          Pegawai                                              Bersih "<<endl;
+	 cout<<endl;
+	 cout<<setiosflags(ios::left)<<setw(12)<<nip;
+	 cout<<setiosflags(ios::left)<<setw(12)<<nama;
+	 cout<<setiosflags(ios::right)<<setw(6)<<tunj;
+	 cout<<setiosflags(ios::right)<<setw(15)<<gajipo;
+	 cout<<setiosflags(ios::right)<<setw(12)<<pajak;
+	 cout<<endl;
+	 cout<<"----------------------------------------------------------------------"<<endl;
+	 cout<<setiosflags(ios::right)<<setw(63)<<" Total Gaji yang dikeluarkan Rp. "<<gajibe<<endl;
 
-         return 0;
+	 return 0;
 }
